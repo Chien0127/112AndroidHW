@@ -11,7 +11,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.content.Intent;
 
-
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     quantity = Integer.parseInt(editTextNumber.getText().toString());
                 } catch (NumberFormatException e) {
-                    lblOutput.setText("請輸入有效的購買張數");
+                    lblOutput.setText("請輸購買張數");
                     return;
                 }
 

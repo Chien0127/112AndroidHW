@@ -82,10 +82,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="204dp"
 
         android:text="選擇"
+        app:layout_constraintEnd_toStartOf="@+id/confirmBtn"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgType"
         tools:text="@string/choose" />
@@ -94,8 +96,8 @@
         android:id="@+id/lblOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="92dp"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +107,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:text="購買張數 :"
         android:textSize="16sp"
@@ -113,7 +115,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgType"
-        app:layout_constraintVertical_bias="0.481"
+        app:layout_constraintVertical_bias="0.25"
         tools:text="@string/NumberOfSheets" />
 
     <EditText
@@ -133,12 +135,12 @@
         android:id="@+id/confirmBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="320dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="240dp"
         android:text="確定"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
         tools:text="@string/confirn" />
 
     <TextView
