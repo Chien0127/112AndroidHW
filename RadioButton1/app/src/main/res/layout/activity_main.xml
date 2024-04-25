@@ -83,11 +83,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="220dp"
 
         android:text="選擇"
         app:layout_constraintEnd_toStartOf="@+id/confirmBtn"
-        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgType"
         tools:text="@string/choose" />
@@ -96,8 +96,8 @@
         android:id="@+id/lblOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,9 +120,9 @@
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_width="216dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
         android:inputType="number"
@@ -135,12 +135,12 @@
         android:id="@+id/confirmBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginEnd="80dp"
         android:text="確定"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568"
         tools:text="@string/confirn" />
 
     <TextView
