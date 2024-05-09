@@ -1,3 +1,5 @@
+//A111222006
+
 package com.example.radiobutton1;
 
 import android.content.Intent;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     quantity = Integer.parseInt(editTextNumber.getText().toString());
                 } catch (NumberFormatException e) {
-                    lblOutput.setText("請輸購買張數");
+                    lblOutput.setText("請輸入購買張數");
                     return;
                 }
 

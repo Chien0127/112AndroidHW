@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">RadioButtonHW</string>
-    <string name="male">男生</string>
-    <string name="female">女生</string>
-    <string name="regularticket">全票</string>
-    <string name="childticket">兒童票</string>
-    <string name="studentticket">學生票</string>
-    <string name="NumberOfSheets">購買張數 :</string>
-    <string name="confirn">確定</string>
-    <string name="choose">選擇</string>
-    <string name="close">關閉</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="regularticket">Regular Ticket</string>
+    <string name="childticket">Children Ticket</string>
+    <string name="studentticket">Student Ticket</string>
+    <string name="NumberOfSheets">Count :</string>
+    <string name="confirn">Confirm</string>
+    <string name="choose">Choose</string>
+    <string name="ticketType">Ticket Type</string>
+    <string name="close">Close</string>
+    <string name="gender">Gender:</string>
+    <string name="detail">Order:</string>
+    <string name="totalCost">Total:</string>
 </resources>
+
+
