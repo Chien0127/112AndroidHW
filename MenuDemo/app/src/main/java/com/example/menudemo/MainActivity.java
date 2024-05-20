@@ -1,6 +1,7 @@
 package com.example.menudemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -11,14 +12,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView;
 import android.view.View;
-
-import com.example.menudemo.MainActivity2;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private Spinner categorySpinner;
     private ListView itemListView;
     private TextView mainCourseSelection, sideDishSelection, drinksSelection;
+    private Button confirmButton, cancelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         mainCourseSelection = findViewById(R.id.main_course_selection);
         sideDishSelection = findViewById(R.id.side_dish_selection);
         drinksSelection = findViewById(R.id.drinks_selection);
+        confirmButton = findViewById(R.id.confirm_button);
+        cancelButton = findViewById(R.id.cancel_button);
+
 
         ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,
                 R.array.category_array, android.R.layout.simple_spinner_item);
@@ -51,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 String[] items = getResources().getStringArray(arrayResId);
-                MainActivity2 itemAdapter = new MainActivity2(MainActivity.this,
-                        android.R.layout.simple_list_item_1, items);
+                ArrayAdapter<String> itemAdapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, items);
                 itemListView.setAdapter(itemAdapter);
+
 
                 itemListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -74,6 +78,26 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // Do nothing
+            }
+        });
+
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                intent.putExtra("mainCourse", mainCourseSelection.getText().toString());
+                intent.putExtra("sideDish", sideDishSelection.getText().toString());
+                intent.putExtra("drinks", drinksSelection.getText().toString());
+                startActivity(intent);
+            }
+        });
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainCourseSelection.setText("請選擇");
+                sideDishSelection.setText("請選擇");
+                drinksSelection.setText("請選擇");
             }
         });
     }

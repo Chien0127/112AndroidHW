@@ -1,34 +1,30 @@
 package com.example.menudemo;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.os.Bundle;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+public class MainActivity2 extends AppCompatActivity {
 
-public class MainActivity2 extends ArrayAdapter<String> {
+    private TextView mainCourseTextView, sideDishTextView, drinksTextView;
 
-    private int resource;
-
-    public MainActivity2(@NonNull Context context, int resource, @NonNull String[] objects) {
-        super(context, resource, objects);
-        this.resource = resource;
-    }
-
-    @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        String item = getItem(position);
-        if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(resource, parent, false);
-        }
-        TextView textView = convertView.findViewById(android.R.id.text1);
-        textView.setText(item);
-        textView.setTextSize(20);
-        return convertView;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+
+        mainCourseTextView = findViewById(R.id.main_course_detail);
+        sideDishTextView = findViewById(R.id.side_dish_detail);
+        drinksTextView = findViewById(R.id.drinks_detail);
+
+        // 获取传递过来的订单详情数据
+        String mainCourse = getIntent().getStringExtra("mainCourse");
+        String sideDish = getIntent().getStringExtra("sideDish");
+        String drinks = getIntent().getStringExtra("drinks");
+
+        // 设置订单详情文本
+        mainCourseTextView.setText(mainCourse);
+        sideDishTextView.setText(sideDish);
+        drinksTextView.setText(drinks);
     }
 }
