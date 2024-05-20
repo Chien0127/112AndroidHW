@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.AdapterView;
 import android.view.View;
 
-//import com.example.menudemo.CustomArrayAdapter;
+import com.example.menudemo.MainActivity2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,13 +31,11 @@ public class MainActivity extends AppCompatActivity {
         sideDishSelection = findViewById(R.id.side_dish_selection);
         drinksSelection = findViewById(R.id.drinks_selection);
 
-        // 设置类别下拉式选择菜单的数据
         ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,
                 R.array.category_array, android.R.layout.simple_spinner_item);
         categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categorySpinner.setAdapter(categoryAdapter);
 
-        // 设置类别下拉式选择菜单的监听器
         categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 String[] items = getResources().getStringArray(arrayResId);
-                CustomArrayAdapter itemAdapter = new CustomArrayAdapter(MainActivity.this,
+                MainActivity2 itemAdapter = new MainActivity2(MainActivity.this,
                         android.R.layout.simple_list_item_1, items);
                 itemListView.setAdapter(itemAdapter);
 
