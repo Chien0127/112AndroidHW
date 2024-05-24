@@ -11,18 +11,21 @@
     <string-array name="main_course_array">
         <item>豬肉漢堡</item>
         <item>牛肉漢堡</item>
-        <item>雞肉漢堡</item>
+        <item>炸雞漢堡</item>
+        <item>炸魚漢堡</item>
     </string-array>
 
     <string-array name="side_dish_array">
         <item>沙拉</item>
         <item>玉米濃湯</item>
-        <item>海鮮濃湯</item>
+        <item>蘋果派</item>
+        <item>薯條</item>
     </string-array>
 
     <string-array name="drinks_array">
         <item>可樂</item>
         <item>雪碧</item>
         <item>冰紅茶</item>
+        <item>柳橙汁</item>
     </string-array>
 </resources>
